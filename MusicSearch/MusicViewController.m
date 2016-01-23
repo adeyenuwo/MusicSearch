@@ -52,7 +52,8 @@
     cell.albumNameLabel.text = [music albumName];
     cell.artistNameLabel.text = [music artistName];
     cell.trackNameLabel.text = [music trackName];
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://is1.mzstatic.com/image/thumb/Music/v4/77/75/9d/77759d17-3f8f-1c81-8e4d-fa8cb2c17f61/source/60x60bb.jpg"]];
+    NSString *urlString = [music albumImage];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[urlString stringByReplacingOccurrencesOfString:@"http:" withString:@"https:"]]];
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     [cell.albumImageView setImageWithURLRequest:request
                                placeholderImage:[UIImage imageNamed:@"sample-128.png"]
@@ -68,30 +69,14 @@
                                         } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
                                             NSLog(@"An error occured retrieving the image %@", [error description]);
                                         }];
-
-//    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:[music albumImage]]];
-//    [cell.albumImageView setImageWithURL:[NSURL URLWithString:[music albumImage]]];
     NSLog(@"Image URL %@", [music albumImage]);
-//    [cell.albumImageView setImageWithURLRequest:urlRequest placeholderImage:nil success:nil failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
-//        //
-//    }];
-    
-//    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:[music albumImage]]];
-//    AFHTTPRequestOperation *requestOperation = [[AFHTTPRequestOperation alloc] initWithRequest:urlRequest];
-//    requestOperation.responseSerializer = [AFImageResponseSerializer serializer];
-//    [requestOperation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-//        NSLog(@"Response: %@", responseObject);
-//        cell.albumImageView.image = responseObject;
-//        
-//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-//        NSLog(@"Image error: %@", error);
-//    }];
-//    [requestOperation start];
 }
 
 #pragma mark - UISearchBar Delegate Methods
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
-    NSLog(@"Search button was clicked now!. Search Term is %@", searchBar.text);
+    
+    // Dismiss the keyboard
+    [searchBar resignFirstResponder];
     
     NSDictionary *params = [[NSDictionary alloc] initWithObjectsAndKeys:searchBar.text, @"searchterm", nil];
     [[APIClient sharedInstance] getCommand:params onCompletion:^(NSDictionary *json) {
