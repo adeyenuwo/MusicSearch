@@ -19,6 +19,7 @@
 		DD5B31011C530ABF0034CB6A /* Music.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5B31001C530ABF0034CB6A /* Music.m */; };
 		DD5B31051C530AD70034CB6A /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5B31041C530AD70034CB6A /* APIClient.m */; };
 		DD5B31111C5316E50034CB6A /* UIAlertController+Message.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5B31101C5316E50034CB6A /* UIAlertController+Message.m */; };
+		DD5B31161C5320760034CB6A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DD5B31181C5320760034CB6A /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,10 @@
 		DD5B31061C530FCD0034CB6A /* MusicSearch-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MusicSearch-Prefix.pch"; sourceTree = "<group>"; };
 		DD5B310F1C5316E50034CB6A /* UIAlertController+Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Message.h"; sourceTree = "<group>"; };
 		DD5B31101C5316E50034CB6A /* UIAlertController+Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Message.m"; sourceTree = "<group>"; };
+		DD5B31141C5320560034CB6A /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		DD5B31151C5320560034CB6A /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		DD5B31171C5320760034CB6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DD5B31191C53209A0034CB6A /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +144,7 @@
 				DD5B30D91C530A8C0034CB6A /* LaunchScreen.storyboard */,
 				DD5B30DC1C530A8C0034CB6A /* Info.plist */,
 				DD5B30CB1C530A8C0034CB6A /* Supporting Files */,
+				DD5B31181C5320760034CB6A /* Localizable.strings */,
 			);
 			path = MusicSearch;
 			sourceTree = "<group>";
@@ -292,6 +298,7 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = DD5B30BF1C530A8C0034CB6A;
 			productRefGroup = DD5B30C91C530A8C0034CB6A /* Products */;
@@ -311,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD5B30DB1C530A8C0034CB6A /* LaunchScreen.storyboard in Resources */,
+				DD5B31161C5320760034CB6A /* Localizable.strings in Resources */,
 				DD5B30D81C530A8C0034CB6A /* Assets.xcassets in Resources */,
 				DD5B30D61C530A8C0034CB6A /* Main.storyboard in Resources */,
 			);
@@ -415,6 +423,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				DD5B30D51C530A8C0034CB6A /* Base */,
+				DD5B31141C5320560034CB6A /* fr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -423,8 +432,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				DD5B30DA1C530A8C0034CB6A /* Base */,
+				DD5B31151C5320560034CB6A /* fr */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		DD5B31181C5320760034CB6A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD5B31171C5320760034CB6A /* Base */,
+				DD5B31191C53209A0034CB6A /* fr */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
