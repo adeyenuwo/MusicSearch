@@ -18,6 +18,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    // In order to be able to reach global audiences with the app, internalization is important. This is demonstrated in the next line, pulling the title from the Localizable strings file. In a full-fledged app, all string will be placed in this file and fetched when required. It also makes it easier to have all text in the same place, making it easier to apply copy-updates app-wide, by making changes in the localizable strings file
+    self.navigationItem.title = NSLocalizedString(@"MUSIC_SCENE_TITLE", nil);
     _musicEntity = [[NSMutableArray alloc] init];
     _tableView.delegate = self;
     
@@ -47,7 +49,7 @@
     if (cell == nil) {
         cell = [[MusicTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
-    // This method helps to separate the customization of the contents of the cell from the delegate method that dequeues a re-usable cell or creates a new one, if there is none to deque. 
+    // This method helps to separate the customization of the contents of the cell from the delegate method that dequeues a re-usable cell or creates a new one, if there is none to deque.
     [self configureCell:cell forTableView:tableView atIndexPath:indexPath];
     return cell;
 }

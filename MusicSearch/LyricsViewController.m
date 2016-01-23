@@ -18,13 +18,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    // In order to be able to reach global audiences with the app, internalization is important. This is demonstrated in the next line, pulling the title from the Localizable strings file. In a full-fledged app, all string will be placed in this file and fetched when required. It also makes it easier to have all text in the same place, making it easier to apply copy-updates app-wide, by making changes in the localizable strings file
+    self.navigationItem.title = NSLocalizedString(@"LYRICS_SCENE_TITLE", nil);
     _trackNameLabel.text = [_song valueForKey:@"song"];
     _artistNameLabel.text = [_song valueForKey:@"artist"];
     _albumNameLabel.text = [_song valueForKey:@"lyrics"];
     _albumImageUrlLabel.text = [_song valueForKey:@"url"];
     _albumImageUrlLabel.numberOfLines = 0;
-    self.automaticallyAdjustsScrollViewInsets = NO;
-
+    [self setAutomaticallyAdjustsScrollViewInsets:NO];
     [self loadLyrics];
 }
 
@@ -49,7 +50,7 @@
     [[APIClient sharedInstance] getLyricsCommand:params onCompletion:^(NSData *data) {
         NSURL *url = [self parseResponseData:data];
         if (url != nil) {
-           [self loadLyricsWebView:url];
+            [self loadLyricsWebView:url];
         }
     }];
 }

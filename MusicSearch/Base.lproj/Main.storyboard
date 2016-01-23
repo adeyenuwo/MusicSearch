@@ -203,7 +203,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="07l-tQ-xKM" secondAttribute="trailing" constant="-20" id="zRT-8U-urR"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="odP-f3-73R"/>
+                    <navigationItem key="navigationItem" title="Music" id="odP-f3-73R"/>
                     <connections>
                         <outlet property="tableView" destination="rra-QF-nhK" id="X2S-KV-4lE"/>
                     </connections>

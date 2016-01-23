@@ -6,4 +6,5 @@
   Copyright © 2016 paulade. All rights reserved.
 */
 
-"SOME_LABEL"="SOME_LABEL_TEXT";
+"MUSIC_SCENE_TITLE"="Music Search";
+"LYRICS_SCENE_TITLE"="Song Details";
