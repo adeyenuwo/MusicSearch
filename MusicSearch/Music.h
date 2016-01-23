@@ -22,6 +22,6 @@
  *
  *  @return <#return value description#>
  */
-- (instancetype)initWithDictionary:(NSDictionary *)sentence;
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
 @end

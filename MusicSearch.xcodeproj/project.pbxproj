@@ -24,6 +24,7 @@
 		DD5B311F1C5326DF0034CB6A /* MusicTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5B311E1C5326DF0034CB6A /* MusicTableViewCell.m */; };
 		DD5B31211C5337100034CB6A /* sample-128.png in Resources */ = {isa = PBXBuildFile; fileRef = DD5B31201C5337100034CB6A /* sample-128.png */; };
 		DD5B31261C53CE450034CB6A /* LyricsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5B31251C53CE450034CB6A /* LyricsViewController.m */; };
+		DD5B31291C53D1760034CB6A /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5B31281C53D1760034CB6A /* Song.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,8 @@
 		DD5B31201C5337100034CB6A /* sample-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sample-128.png"; sourceTree = "<group>"; };
 		DD5B31241C53CE450034CB6A /* LyricsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LyricsViewController.h; sourceTree = "<group>"; };
 		DD5B31251C53CE450034CB6A /* LyricsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LyricsViewController.m; sourceTree = "<group>"; };
+		DD5B31271C53D1760034CB6A /* Song.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Song.h; sourceTree = "<group>"; };
+		DD5B31281C53D1760034CB6A /* Song.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Song.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +196,8 @@
 				DD5B31001C530ABF0034CB6A /* Music.m */,
 				DD5B311D1C5326DF0034CB6A /* MusicTableViewCell.h */,
 				DD5B311E1C5326DF0034CB6A /* MusicTableViewCell.m */,
+				DD5B31271C53D1760034CB6A /* Song.h */,
+				DD5B31281C53D1760034CB6A /* Song.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -418,6 +423,7 @@
 				DD5B30D31C530A8C0034CB6A /* MusicViewController.m in Sources */,
 				DD5B311F1C5326DF0034CB6A /* MusicTableViewCell.m in Sources */,
 				DD5B31011C530ABF0034CB6A /* Music.m in Sources */,
+				DD5B31291C53D1760034CB6A /* Song.m in Sources */,
 				DD5B30D01C530A8C0034CB6A /* AppDelegate.m in Sources */,
 				DD5B30CD1C530A8C0034CB6A /* main.m in Sources */,
 			);

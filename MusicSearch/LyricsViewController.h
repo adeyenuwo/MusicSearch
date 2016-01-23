@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface LyricsViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *trackNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *artistNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *albumNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *albumImageUrlLabel;
+@property (weak, nonatomic) IBOutlet UITextView *lyricsTextView;
 
 @end
