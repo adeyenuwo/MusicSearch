@@ -10,7 +10,7 @@
 #import "APIClient.h"
 #import "Song.h"
 
-@interface LyricsViewController : UIViewController
+@interface LyricsViewController : UITableViewController
 @property (weak, nonatomic) IBOutlet UILabel *trackNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *artistNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *albumNameLabel;
