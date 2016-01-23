@@ -1,5 +1,5 @@
 //
-//  MusicDetailViewController.h
+//  LyricsViewController.h
 //  MusicSearch
 //
 //  Created by Paul Ade on 2016-01-23.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MusicDetailViewController : UIViewController
+@interface LyricsViewController : UIViewController
 
 @end

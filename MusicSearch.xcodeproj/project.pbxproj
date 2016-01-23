@@ -23,7 +23,7 @@
 		DD5B311C1C53245A0034CB6A /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = DD5B311B1C53245A0034CB6A /* arrow.png */; };
 		DD5B311F1C5326DF0034CB6A /* MusicTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5B311E1C5326DF0034CB6A /* MusicTableViewCell.m */; };
 		DD5B31211C5337100034CB6A /* sample-128.png in Resources */ = {isa = PBXBuildFile; fileRef = DD5B31201C5337100034CB6A /* sample-128.png */; };
-		DD5B31261C53CE450034CB6A /* MusicDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5B31251C53CE450034CB6A /* MusicDetailViewController.m */; };
+		DD5B31261C53CE450034CB6A /* LyricsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5B31251C53CE450034CB6A /* LyricsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,8 +78,8 @@
 		DD5B311D1C5326DF0034CB6A /* MusicTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicTableViewCell.h; sourceTree = "<group>"; };
 		DD5B311E1C5326DF0034CB6A /* MusicTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicTableViewCell.m; sourceTree = "<group>"; };
 		DD5B31201C5337100034CB6A /* sample-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sample-128.png"; sourceTree = "<group>"; };
-		DD5B31241C53CE450034CB6A /* MusicDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicDetailViewController.h; sourceTree = "<group>"; };
-		DD5B31251C53CE450034CB6A /* MusicDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicDetailViewController.m; sourceTree = "<group>"; };
+		DD5B31241C53CE450034CB6A /* LyricsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LyricsViewController.h; sourceTree = "<group>"; };
+		DD5B31251C53CE450034CB6A /* LyricsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LyricsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,8 +229,8 @@
 			children = (
 				DD5B30D11C530A8C0034CB6A /* MusicViewController.h */,
 				DD5B30D21C530A8C0034CB6A /* MusicViewController.m */,
-				DD5B31241C53CE450034CB6A /* MusicDetailViewController.h */,
-				DD5B31251C53CE450034CB6A /* MusicDetailViewController.m */,
+				DD5B31241C53CE450034CB6A /* LyricsViewController.h */,
+				DD5B31251C53CE450034CB6A /* LyricsViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -413,7 +413,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD5B31051C530AD70034CB6A /* APIClient.m in Sources */,
-				DD5B31261C53CE450034CB6A /* MusicDetailViewController.m in Sources */,
+				DD5B31261C53CE450034CB6A /* LyricsViewController.m in Sources */,
 				DD5B31111C5316E50034CB6A /* UIAlertController+Message.m in Sources */,
 				DD5B30D31C530A8C0034CB6A /* MusicViewController.m in Sources */,
 				DD5B311F1C5326DF0034CB6A /* MusicTableViewCell.m in Sources */,

@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
-        <!--Music Detail View Controller-->
+        <!--Lyrics View Controller-->
         <scene sceneID="IZh-Tw-zxW">
             <objects>
-                <viewController id="M8F-la-ArS" customClass="MusicDetailViewController" sceneMemberID="viewController">
+                <viewController id="M8F-la-ArS" customClass="LyricsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZcM-v1-QoG"/>
                         <viewControllerLayoutGuide type="bottom" id="nh9-zi-9qs"/>

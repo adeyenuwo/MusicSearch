@@ -1,18 +1,18 @@
 //
-//  MusicDetailViewController.m
+//  LyricsViewController.m
 //  MusicSearch
 //
 //  Created by Paul Ade on 2016-01-23.
 //  Copyright © 2016 paulade. All rights reserved.
 //
 
-#import "MusicDetailViewController.h"
+#import "LyricsViewController.h"
 
-@interface MusicDetailViewController ()
+@interface LyricsViewController ()
 
 @end
 
-@implementation MusicDetailViewController
+@implementation LyricsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
