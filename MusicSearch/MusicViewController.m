@@ -23,7 +23,7 @@
     
 }
 
-- (void)viewWillAppear:(BOOL)animated
+- (void)viewdidAppear:(BOOL)animated
 {
     [self.tableView reloadData];
 }
