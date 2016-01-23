@@ -5,6 +5,25 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
+        <!--Music Detail View Controller-->
+        <scene sceneID="IZh-Tw-zxW">
+            <objects>
+                <viewController id="M8F-la-ArS" customClass="MusicDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZcM-v1-QoG"/>
+                        <viewControllerLayoutGuide type="bottom" id="nh9-zi-9qs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hsw-CX-yd6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5wT-zz-23w"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pv6-qM-M86" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1956" y="415"/>
+        </scene>
         <!--Music View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -28,11 +47,11 @@
                                 <rect key="frame" x="0.0" y="108" width="600" height="492"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MusicCell" rowHeight="100" id="tFj-SK-rAL" customClass="MusicTableViewCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MusicCell" rowHeight="100" id="tFj-SK-rAL" customClass="MusicTableViewCell">
                                         <rect key="frame" x="0.0" y="28" width="600" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tFj-SK-rAL" id="Gs8-hk-J6I">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="99"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="99"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XYJ-ef-dqv">
@@ -71,6 +90,7 @@
                                             <outlet property="albumNameLabel" destination="2dd-jd-wd8" id="mSK-h2-Zav"/>
                                             <outlet property="artistNameLabel" destination="GwB-vM-Lcx" id="iTN-rp-Yqc"/>
                                             <outlet property="trackNameLabel" destination="ycL-TY-Usm" id="4MR-es-sss"/>
+                                            <segue destination="M8F-la-ArS" kind="push" id="Seb-mM-Dbe"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

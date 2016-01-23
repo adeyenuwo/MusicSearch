@@ -23,6 +23,7 @@
 		DD5B311C1C53245A0034CB6A /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = DD5B311B1C53245A0034CB6A /* arrow.png */; };
 		DD5B311F1C5326DF0034CB6A /* MusicTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5B311E1C5326DF0034CB6A /* MusicTableViewCell.m */; };
 		DD5B31211C5337100034CB6A /* sample-128.png in Resources */ = {isa = PBXBuildFile; fileRef = DD5B31201C5337100034CB6A /* sample-128.png */; };
+		DD5B31261C53CE450034CB6A /* MusicDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5B31251C53CE450034CB6A /* MusicDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,8 @@
 		DD5B311D1C5326DF0034CB6A /* MusicTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicTableViewCell.h; sourceTree = "<group>"; };
 		DD5B311E1C5326DF0034CB6A /* MusicTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicTableViewCell.m; sourceTree = "<group>"; };
 		DD5B31201C5337100034CB6A /* sample-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sample-128.png"; sourceTree = "<group>"; };
+		DD5B31241C53CE450034CB6A /* MusicDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicDetailViewController.h; sourceTree = "<group>"; };
+		DD5B31251C53CE450034CB6A /* MusicDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,14 +142,13 @@
 		DD5B30CA1C530A8C0034CB6A /* MusicSearch */ = {
 			isa = PBXGroup;
 			children = (
+				DD5B31221C53CE050034CB6A /* ViewControllers */,
 				DD5B311A1C53244C0034CB6A /* Images */,
 				DD5B31071C5315520034CB6A /* Categories */,
 				DD5B31021C530ACA0034CB6A /* APIClient */,
 				DD5B30FE1C530AB50034CB6A /* Model */,
 				DD5B30CE1C530A8C0034CB6A /* AppDelegate.h */,
 				DD5B30CF1C530A8C0034CB6A /* AppDelegate.m */,
-				DD5B30D11C530A8C0034CB6A /* MusicViewController.h */,
-				DD5B30D21C530A8C0034CB6A /* MusicViewController.m */,
 				DD5B30D41C530A8C0034CB6A /* Main.storyboard */,
 				DD5B30D71C530A8C0034CB6A /* Assets.xcassets */,
 				DD5B30D91C530A8C0034CB6A /* LaunchScreen.storyboard */,
@@ -220,6 +222,17 @@
 				DD5B311B1C53245A0034CB6A /* arrow.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		DD5B31221C53CE050034CB6A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DD5B30D11C530A8C0034CB6A /* MusicViewController.h */,
+				DD5B30D21C530A8C0034CB6A /* MusicViewController.m */,
+				DD5B31241C53CE450034CB6A /* MusicDetailViewController.h */,
+				DD5B31251C53CE450034CB6A /* MusicDetailViewController.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		ECB428BF3279994CED9EBA55 /* Frameworks */ = {
@@ -400,6 +413,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD5B31051C530AD70034CB6A /* APIClient.m in Sources */,
+				DD5B31261C53CE450034CB6A /* MusicDetailViewController.m in Sources */,
 				DD5B31111C5316E50034CB6A /* UIAlertController+Message.m in Sources */,
 				DD5B30D31C530A8C0034CB6A /* MusicViewController.m in Sources */,
 				DD5B311F1C5326DF0034CB6A /* MusicTableViewCell.m in Sources */,
