@@ -10,7 +10,7 @@
 		2BBAF7E246B6B4AB82E07B84 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CAB90A1B351EC0BA92C993E4 /* libPods.a */; };
 		DD5B30CD1C530A8C0034CB6A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5B30CC1C530A8C0034CB6A /* main.m */; };
 		DD5B30D01C530A8C0034CB6A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5B30CF1C530A8C0034CB6A /* AppDelegate.m */; };
-		DD5B30D31C530A8C0034CB6A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5B30D21C530A8C0034CB6A /* ViewController.m */; };
+		DD5B30D31C530A8C0034CB6A /* MusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5B30D21C530A8C0034CB6A /* MusicViewController.m */; };
 		DD5B30D61C530A8C0034CB6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD5B30D41C530A8C0034CB6A /* Main.storyboard */; };
 		DD5B30D81C530A8C0034CB6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD5B30D71C530A8C0034CB6A /* Assets.xcassets */; };
 		DD5B30DB1C530A8C0034CB6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD5B30D91C530A8C0034CB6A /* LaunchScreen.storyboard */; };
@@ -20,6 +20,9 @@
 		DD5B31051C530AD70034CB6A /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5B31041C530AD70034CB6A /* APIClient.m */; };
 		DD5B31111C5316E50034CB6A /* UIAlertController+Message.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5B31101C5316E50034CB6A /* UIAlertController+Message.m */; };
 		DD5B31161C5320760034CB6A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DD5B31181C5320760034CB6A /* Localizable.strings */; };
+		DD5B311C1C53245A0034CB6A /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = DD5B311B1C53245A0034CB6A /* arrow.png */; };
+		DD5B311F1C5326DF0034CB6A /* MusicTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5B311E1C5326DF0034CB6A /* MusicTableViewCell.m */; };
+		DD5B31211C5337100034CB6A /* sample-128.png in Resources */ = {isa = PBXBuildFile; fileRef = DD5B31201C5337100034CB6A /* sample-128.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,8 +50,8 @@
 		DD5B30CC1C530A8C0034CB6A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DD5B30CE1C530A8C0034CB6A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DD5B30CF1C530A8C0034CB6A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		DD5B30D11C530A8C0034CB6A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		DD5B30D21C530A8C0034CB6A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DD5B30D11C530A8C0034CB6A /* MusicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusicViewController.h; sourceTree = "<group>"; };
+		DD5B30D21C530A8C0034CB6A /* MusicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MusicViewController.m; sourceTree = "<group>"; };
 		DD5B30D51C530A8C0034CB6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DD5B30D71C530A8C0034CB6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD5B30DA1C530A8C0034CB6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -70,6 +73,10 @@
 		DD5B31151C5320560034CB6A /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		DD5B31171C5320760034CB6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DD5B31191C53209A0034CB6A /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DD5B311B1C53245A0034CB6A /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
+		DD5B311D1C5326DF0034CB6A /* MusicTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicTableViewCell.h; sourceTree = "<group>"; };
+		DD5B311E1C5326DF0034CB6A /* MusicTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicTableViewCell.m; sourceTree = "<group>"; };
+		DD5B31201C5337100034CB6A /* sample-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sample-128.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,13 +139,14 @@
 		DD5B30CA1C530A8C0034CB6A /* MusicSearch */ = {
 			isa = PBXGroup;
 			children = (
+				DD5B311A1C53244C0034CB6A /* Images */,
 				DD5B31071C5315520034CB6A /* Categories */,
 				DD5B31021C530ACA0034CB6A /* APIClient */,
 				DD5B30FE1C530AB50034CB6A /* Model */,
 				DD5B30CE1C530A8C0034CB6A /* AppDelegate.h */,
 				DD5B30CF1C530A8C0034CB6A /* AppDelegate.m */,
-				DD5B30D11C530A8C0034CB6A /* ViewController.h */,
-				DD5B30D21C530A8C0034CB6A /* ViewController.m */,
+				DD5B30D11C530A8C0034CB6A /* MusicViewController.h */,
+				DD5B30D21C530A8C0034CB6A /* MusicViewController.m */,
 				DD5B30D41C530A8C0034CB6A /* Main.storyboard */,
 				DD5B30D71C530A8C0034CB6A /* Assets.xcassets */,
 				DD5B30D91C530A8C0034CB6A /* LaunchScreen.storyboard */,
@@ -181,6 +189,8 @@
 			children = (
 				DD5B30FF1C530ABF0034CB6A /* Music.h */,
 				DD5B31001C530ABF0034CB6A /* Music.m */,
+				DD5B311D1C5326DF0034CB6A /* MusicTableViewCell.h */,
+				DD5B311E1C5326DF0034CB6A /* MusicTableViewCell.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -201,6 +211,15 @@
 				DD5B31101C5316E50034CB6A /* UIAlertController+Message.m */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		DD5B311A1C53244C0034CB6A /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				DD5B31201C5337100034CB6A /* sample-128.png */,
+				DD5B311B1C53245A0034CB6A /* arrow.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		ECB428BF3279994CED9EBA55 /* Frameworks */ = {
@@ -320,7 +339,9 @@
 				DD5B30DB1C530A8C0034CB6A /* LaunchScreen.storyboard in Resources */,
 				DD5B31161C5320760034CB6A /* Localizable.strings in Resources */,
 				DD5B30D81C530A8C0034CB6A /* Assets.xcassets in Resources */,
+				DD5B311C1C53245A0034CB6A /* arrow.png in Resources */,
 				DD5B30D61C530A8C0034CB6A /* Main.storyboard in Resources */,
+				DD5B31211C5337100034CB6A /* sample-128.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,7 +401,8 @@
 			files = (
 				DD5B31051C530AD70034CB6A /* APIClient.m in Sources */,
 				DD5B31111C5316E50034CB6A /* UIAlertController+Message.m in Sources */,
-				DD5B30D31C530A8C0034CB6A /* ViewController.m in Sources */,
+				DD5B30D31C530A8C0034CB6A /* MusicViewController.m in Sources */,
+				DD5B311F1C5326DF0034CB6A /* MusicTableViewCell.m in Sources */,
 				DD5B31011C530ABF0034CB6A /* Music.m in Sources */,
 				DD5B30D01C530A8C0034CB6A /* AppDelegate.m in Sources */,
 				DD5B30CD1C530A8C0034CB6A /* main.m in Sources */,
