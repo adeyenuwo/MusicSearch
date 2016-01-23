@@ -61,7 +61,7 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:urlString]];
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     [cell.albumImageView setImageWithURLRequest:request
-                               placeholderImage:[UIImage imageNamed:@"sample-128.png"]
+                               placeholderImage:[UIImage imageNamed:@"albumart.png"]
                                         success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
                                             cell.albumImageView.image = image;
                                             [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
