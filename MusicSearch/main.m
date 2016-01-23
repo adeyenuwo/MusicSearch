@@ -2,7 +2,7 @@
 //  main.m
 //  MusicSearch
 //
-//  Created by Paul Ade on 2016-01-22.
+//  Created by Paul Adeyenuwo on 2016-01-22.
 //  Copyright © 2016 paulade. All rights reserved.
 //
 

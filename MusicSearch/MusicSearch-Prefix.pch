@@ -1,0 +1,20 @@
+//
+//  MusicSearch-Prefix.pch
+//  MusicSearch
+//
+//  Created by Paul Ade on 2016-01-22.
+//  Copyright © 2016 paulade. All rights reserved.
+//
+
+#ifndef MusicSearch_Prefix_pch
+#define MusicSearch_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* MusicSearch_Prefix_pch */
+
+// Use #ifndef for disabling logging, #ifdef for enabling debug in production
+#ifndef DEBUG
+#define NSLog //NSLog
+#endif
