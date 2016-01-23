@@ -22,6 +22,9 @@
     _artistNameLabel.text = [_song valueForKey:@"artist"];
     _albumNameLabel.text = [_song valueForKey:@"lyrics"];
     _albumImageUrlLabel.text = [_song valueForKey:@"url"];
+    _albumImageUrlLabel.numberOfLines = 0;
+    self.automaticallyAdjustsScrollViewInsets = NO;
+
     [self loadLyrics];
 }
 

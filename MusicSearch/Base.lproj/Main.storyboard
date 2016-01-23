@@ -18,36 +18,93 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="trackNameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOV-xT-hrO">
-                                <rect key="frame" x="20" y="72" width="126" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="trackNameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOV-xT-hrO">
+                                <rect key="frame" x="128" y="72" width="452" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="artistNameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="StY-hz-K76">
-                                <rect key="frame" x="20" y="101" width="126" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="artistNameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="StY-hz-K76">
+                                <rect key="frame" x="128" y="101" width="452" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="452" id="F06-hC-Lza"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="albumNameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcu-EP-f1Y">
-                                <rect key="frame" x="20" y="130" width="134" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="albumNameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcu-EP-f1Y">
+                                <rect key="frame" x="128" y="130" width="452" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="albumImageUrlLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Syy-nd-VAn">
-                                <rect key="frame" x="20" y="159" width="158" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gnp-k7-MFc">
-                                <rect key="frame" x="20" y="197" width="560" height="383"/>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gnp-k7-MFc">
+                                <rect key="frame" x="0.0" y="197" width="600" height="403"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                             </webView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xaZ-vN-0gS">
+                                <rect key="frame" x="15" y="72" width="97" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dHl-OO-3Qi">
+                                <rect key="frame" x="15" y="101" width="96" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zKA-i4-0Tj">
+                                <rect key="frame" x="16" y="130" width="103" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album URL:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kKG-pH-92Z">
+                                <rect key="frame" x="15" y="159" width="91" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="albumImageUrlLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Syy-nd-VAn">
+                                <rect key="frame" x="128" y="159" width="452" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xaZ-vN-0gS" firstAttribute="leading" secondItem="dHl-OO-3Qi" secondAttribute="leading" id="4MJ-Ra-jac"/>
+                            <constraint firstItem="kKG-pH-92Z" firstAttribute="top" secondItem="zKA-i4-0Tj" secondAttribute="bottom" constant="8" symbolic="YES" id="7Vx-up-4f9"/>
+                            <constraint firstItem="xaZ-vN-0gS" firstAttribute="height" secondItem="FOV-xT-hrO" secondAttribute="height" id="7jT-aW-omY"/>
+                            <constraint firstItem="dHl-OO-3Qi" firstAttribute="height" secondItem="StY-hz-K76" secondAttribute="height" id="EpD-zG-9nb"/>
+                            <constraint firstItem="xaZ-vN-0gS" firstAttribute="leading" secondItem="kKG-pH-92Z" secondAttribute="leading" id="LEP-iW-KoB"/>
+                            <constraint firstItem="FOV-xT-hrO" firstAttribute="top" secondItem="ZcM-v1-QoG" secondAttribute="bottom" constant="52" id="NjP-9Z-csl"/>
+                            <constraint firstItem="StY-hz-K76" firstAttribute="top" secondItem="FOV-xT-hrO" secondAttribute="bottom" constant="8" id="Pc5-pY-R01"/>
+                            <constraint firstItem="nh9-zi-9qs" firstAttribute="top" secondItem="gnp-k7-MFc" secondAttribute="bottom" id="SRn-fH-IJT"/>
+                            <constraint firstItem="Syy-nd-VAn" firstAttribute="top" secondItem="vcu-EP-f1Y" secondAttribute="bottom" constant="8" id="VkX-it-uBr"/>
+                            <constraint firstItem="StY-hz-K76" firstAttribute="leading" secondItem="vcu-EP-f1Y" secondAttribute="leading" id="Vys-R8-fWB"/>
+                            <constraint firstItem="StY-hz-K76" firstAttribute="trailing" secondItem="FOV-xT-hrO" secondAttribute="trailing" id="XTK-TA-tOF"/>
+                            <constraint firstItem="FOV-xT-hrO" firstAttribute="leading" secondItem="xaZ-vN-0gS" secondAttribute="trailing" constant="16" id="XX0-ld-Yek"/>
+                            <constraint firstItem="vcu-EP-f1Y" firstAttribute="top" secondItem="StY-hz-K76" secondAttribute="bottom" constant="8" id="cly-IM-Qti"/>
+                            <constraint firstItem="StY-hz-K76" firstAttribute="trailing" secondItem="Syy-nd-VAn" secondAttribute="trailing" id="dFa-gc-Ima"/>
+                            <constraint firstItem="kKG-pH-92Z" firstAttribute="height" secondItem="Syy-nd-VAn" secondAttribute="height" id="e6U-mz-FEq"/>
+                            <constraint firstItem="zKA-i4-0Tj" firstAttribute="leading" secondItem="hsw-CX-yd6" secondAttribute="leadingMargin" constant="-4" id="fZS-tW-F4b"/>
+                            <constraint firstItem="xaZ-vN-0gS" firstAttribute="baseline" secondItem="FOV-xT-hrO" secondAttribute="baseline" id="giI-Dc-8Dp"/>
+                            <constraint firstItem="StY-hz-K76" firstAttribute="leading" secondItem="Syy-nd-VAn" secondAttribute="leading" id="jf5-73-wyi"/>
+                            <constraint firstItem="StY-hz-K76" firstAttribute="trailing" secondItem="vcu-EP-f1Y" secondAttribute="trailing" id="q4z-G8-Qpa"/>
+                            <constraint firstItem="StY-hz-K76" firstAttribute="leading" secondItem="FOV-xT-hrO" secondAttribute="leading" id="qeD-uL-6RA"/>
+                            <constraint firstItem="xaZ-vN-0gS" firstAttribute="leading" secondItem="hsw-CX-yd6" secondAttribute="leadingMargin" constant="-5" id="s70-VD-aN4"/>
+                            <constraint firstItem="gnp-k7-MFc" firstAttribute="top" secondItem="Syy-nd-VAn" secondAttribute="bottom" constant="17" id="t91-B1-76p"/>
+                            <constraint firstItem="gnp-k7-MFc" firstAttribute="leading" secondItem="hsw-CX-yd6" secondAttribute="leadingMargin" constant="-20" id="u6g-RT-pf6"/>
+                            <constraint firstItem="zKA-i4-0Tj" firstAttribute="height" secondItem="vcu-EP-f1Y" secondAttribute="height" id="uFd-8Q-wMb"/>
+                            <constraint firstItem="vcu-EP-f1Y" firstAttribute="leading" secondItem="zKA-i4-0Tj" secondAttribute="trailing" constant="9" id="uhZ-vb-sux"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gnp-k7-MFc" secondAttribute="trailing" constant="-20" id="vNw-G6-09t"/>
+                            <constraint firstItem="zKA-i4-0Tj" firstAttribute="top" secondItem="dHl-OO-3Qi" secondAttribute="bottom" constant="8" symbolic="YES" id="zNc-wj-CDM"/>
+                            <constraint firstItem="zKA-i4-0Tj" firstAttribute="baseline" secondItem="vcu-EP-f1Y" secondAttribute="baseline" id="zOT-P6-Zm1"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5wT-zz-23w"/>
                     <connections>
