@@ -8,7 +8,7 @@
         <!--Lyrics Scene-->
         <scene sceneID="IZh-Tw-zxW">
             <objects>
-                <viewController id="M8F-la-ArS" userLabel="Lyrics Scene" customClass="LyricsViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LyricsViewController" title="LyricsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="M8F-la-ArS" userLabel="Lyrics Scene" customClass="LyricsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZcM-v1-QoG"/>
                         <viewControllerLayoutGuide type="bottom" id="nh9-zi-9qs"/>
@@ -41,23 +41,20 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RBu-s4-jse">
-                                <rect key="frame" x="20" y="188" width="565" height="392"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gnp-k7-MFc">
+                                <rect key="frame" x="20" y="197" width="560" height="383"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="5wT-zz-23w"/>
                     <connections>
-                        <outlet property="albumImageUrl" destination="Syy-nd-VAn" id="lD6-Bo-NRB"/>
-                        <outlet property="albumName" destination="vcu-EP-f1Y" id="VQY-VI-UXG"/>
-                        <outlet property="artistName" destination="StY-hz-K76" id="Akb-h6-eE6"/>
-                        <outlet property="lyricsTextView" destination="RBu-s4-jse" id="jRL-22-dc9"/>
-                        <outlet property="trackName" destination="FOV-xT-hrO" id="QXB-yK-mkf"/>
+                        <outlet property="albumImageUrlLabel" destination="Syy-nd-VAn" id="wIz-LL-7fX"/>
+                        <outlet property="albumNameLabel" destination="vcu-EP-f1Y" id="yUa-FR-Gw2"/>
+                        <outlet property="artistNameLabel" destination="StY-hz-K76" id="Loz-D9-acx"/>
+                        <outlet property="lyricsWebView" destination="gnp-k7-MFc" id="eJB-Ct-Inb"/>
+                        <outlet property="trackNameLabel" destination="FOV-xT-hrO" id="sst-hQ-dZq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pv6-qM-M86" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -67,7 +64,7 @@
         <!--Search Scene-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="Search Scene" customClass="MusicViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MusicViewController" title="MusicViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" userLabel="Search Scene" customClass="MusicViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -130,7 +127,6 @@
                                             <outlet property="albumNameLabel" destination="2dd-jd-wd8" id="mSK-h2-Zav"/>
                                             <outlet property="artistNameLabel" destination="GwB-vM-Lcx" id="iTN-rp-Yqc"/>
                                             <outlet property="trackNameLabel" destination="ycL-TY-Usm" id="4MR-es-sss"/>
-                                            <segue destination="M8F-la-ArS" kind="push" id="Seb-mM-Dbe"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

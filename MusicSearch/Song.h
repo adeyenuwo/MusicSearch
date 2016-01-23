@@ -16,11 +16,11 @@
 @property (nonatomic, weak) NSString *url;
 
 /**
- *  <#Description#>
+ *  This is the Song class
  *
  *  @param dictionary A Song dictionary
  *
- *  @return <#return value description#>
+ *  @return instancetype Song Dictionary
  */
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 

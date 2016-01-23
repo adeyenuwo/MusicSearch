@@ -10,8 +10,8 @@
 #import "MusicTableViewCell.h"
 #import "APIClient.h"
 #import "Music.h"
-#import "AFHTTPRequestOperation.h"
 #import "UIImageView+AFNetworking.h"
+#import "LyricsViewController.h"
 
 @interface MusicViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 @property (strong, nonatomic) NSMutableArray *musicEntity;

@@ -7,12 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "APIClient.h"
+#import "Song.h"
 
 @interface LyricsViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *trackNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *artistNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *albumNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *albumImageUrlLabel;
-@property (weak, nonatomic) IBOutlet UITextView *lyricsTextView;
+@property (weak, nonatomic) IBOutlet UIWebView *lyricsWebView;
+@property (strong, nonatomic) Song *song;
 
 @end

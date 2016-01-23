@@ -16,7 +16,7 @@
         _trackName = [dictionary valueForKey:@"trackName"];
         _artistName = [dictionary valueForKey:@"artistName"];
         _albumName = [dictionary valueForKey:@"albumName"];
-        _albumImage = [dictionary valueForKey:@"image"];
+        _albumImageUrl = [dictionary valueForKey:@"image"];
     }
     return self;
 }

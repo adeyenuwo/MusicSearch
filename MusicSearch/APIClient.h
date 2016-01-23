@@ -11,6 +11,8 @@
 #import "UIAlertController+Message.h"
 
 typedef void (^JSONResponseBlock)(NSDictionary *json);
+typedef void (^DataResponseBlock)(NSData *data);
+
 
 @interface APIClient : NSObject
 {
@@ -38,13 +40,6 @@ typedef void (^JSONResponseBlock)(NSDictionary *json);
 /**
  *  <#Description#>
  *
- *  @return <#return value description#>
- */
-- (BOOL)isAuthorized;
-
-/**
- *  <#Description#>
- *
  *  @param params          <#params description#>
  *  @param completionBlock <#completionBlock description#>
  */
@@ -56,6 +51,18 @@ typedef void (^JSONResponseBlock)(NSDictionary *json);
  *  @param params          <#params description#>
  *  @param completionBlock <#completionBlock description#>
  */
-- (void)getCommand:(NSDictionary *)params onCompletion:(JSONResponseBlock)completionBlock;
+- (void)getMusicCommand:(NSDictionary *)params onCompletion:(JSONResponseBlock)completionBlock;
 
+/**
+ *  <#Description#>
+ *
+ *  @param params          <#params description#>
+ *  @param completionBlock <#completionBlock description#>
+ */
+- (void)getLyricsCommand:(NSDictionary *)params onCompletion:(DataResponseBlock)completionBlock;
+
+/**
+ *  This method is used to monitor connectivity to the API Endpoint.
+ */
+- (void)startMonitoringNetworkReachability;
 @end

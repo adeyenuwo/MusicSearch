@@ -13,8 +13,8 @@
 #define kAPIPathApple @"search?term="
 
 // API Path for the Wiki API
-#define kAPIHostWiki @"http://lyrics.wikia.com"
-#define kAPIPathWiki @"api.php?func="
+#define kAPIHostWiki @"https://lyrics.wikia.com"
+#define kAPIPathWiki @"api.php?"
 
 @implementation APIClient
 
@@ -33,20 +33,23 @@
     self = [super init];
     if (self)
     {
-        //Initialize the object in details as required
+        /* Initialize the operationManager objects:
+           1. searchOperationManager: OperationManager configured to point to the public Apple iTunes Search API Endpoint 
+           2. wikiOperationManager: OperationManager configured to point to the public wiki API Endpoint
+         */
         searchOperationManager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:kAPIHostApple]];
         wikiOperationManager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:kAPIHostWiki]];
-
-        //
+        
+        // Configure both operation managers request and response serializers. The Wiki API does not return a JSON response, so AFHTTPResponseSerializer is used.
         searchOperationManager.responseSerializer = [AFJSONResponseSerializer serializer];
         searchOperationManager.requestSerializer = [AFJSONRequestSerializer serializer];
-        wikiOperationManager.responseSerializer = [AFJSONResponseSerializer serializer];
+        wikiOperationManager.responseSerializer = [AFHTTPResponseSerializer serializer];
         wikiOperationManager.requestSerializer = [AFJSONRequestSerializer serializer];
-        
     }
     
     return self;
 }
+
 
 - (void)startMonitoringNetworkReachability
 {
@@ -56,7 +59,7 @@
                 //NSLog(@"No internet connection");
                 
                 [UIAlertController alertControllerWithTitle:@"" message:nil preferredStyle:UIAlertControllerStyleAlert actions:[UIAlertAction actionWithTitle: @"Close" style: UIAlertActionStyleDefault handler: nil]];
-
+                
                 break;
             case AFNetworkReachabilityStatusReachableViaWiFi:
                 //NSLog(@"Reachable by WIFI");
@@ -76,30 +79,36 @@
     [searchOperationManager.reachabilityManager startMonitoring];
 }
 
+// Note: I have specifically named the two GET methods so it is clearer which endpoint it is connecting to. This API clients supports 2 endpoints for both iTunes and Wiki. In apps with a single endpoint, it would be sufficient to just name this getCommand. POST, PUT, etc commands could be postCommand, putCommand, etc.
 
-
-- (BOOL)isAuthorized
+- (void)getMusicCommand:(NSDictionary *)params onCompletion:(JSONResponseBlock)completionBlock
 {
-    return YES;
-}
-
-- (void)getCommand:(NSDictionary *)params onCompletion:(JSONResponseBlock)completionBlock
-{
+    // Encode the URL before passing it to the operationManager
     NSString* encodedUrl = [[params objectForKey:@"searchterm"] stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]] ;
-    
-    NSLog(@"Full URL now %@", [kAPIPathApple stringByAppendingString:encodedUrl]);
     [searchOperationManager GET:[kAPIPathApple stringByAppendingString:encodedUrl] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         // Success
-        NSLog(@"Data returned %@", [responseObject description]);
         completionBlock(responseObject);
-        
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         // Failure
-        NSLog(@"An error has occurred!");
         completionBlock([NSDictionary dictionaryWithObject:[error localizedDescription] forKey:@"error"]);
     }];
 }
 
+- (void)getLyricsCommand:(NSDictionary *)params onCompletion:(DataResponseBlock)completionBlock
+{
+    [wikiOperationManager GET:kAPIPathWiki
+                   parameters:params
+                      success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                          // Success
+                          completionBlock(responseObject);
+                      } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                          // Failure
+                          NSData *data = [[error localizedDescription] dataUsingEncoding:NSUTF8StringEncoding];
+                          completionBlock(data);
+                      }];
+}
+
+// This method is not used here because a POST method is not supported for the endpoints and the operations required in this assignment. I am adding this to show how this API client could be extended to be able to support all the REST operations e.g. for POST, PUT, DELETE, etc.
 - (void)postCommand:(NSDictionary *)params onCompletion:(JSONResponseBlock)completionBlock
 {
     [searchOperationManager POST:kAPIPathApple parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
