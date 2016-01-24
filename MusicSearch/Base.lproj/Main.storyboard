@@ -31,7 +31,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="trackNameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rra-I0-J3x">
-                                                    <rect key="frame" x="108" y="11" width="484" height="21"/>
+                                                    <rect key="frame" x="113" y="11" width="479" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -53,7 +53,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="artistNameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gCv-cf-JAs">
-                                                    <rect key="frame" x="106" y="11" width="486" height="21"/>
+                                                    <rect key="frame" x="112" y="11" width="480" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -96,7 +96,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="albumImageUrlLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1d-xp-t8p">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="albumImageUrlLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1d-xp-t8p">
                                                     <rect key="frame" x="107" y="11" width="485" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -112,11 +112,17 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="426"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hrs-6K-bfc">
+                                                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hrs-6K-bfc">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="425"/>
                                                     <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                                                 </webView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Hrs-6K-bfc" firstAttribute="leading" secondItem="nEH-iT-cd2" secondAttribute="leadingMargin" constant="-8" id="9mM-4t-jyL"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Hrs-6K-bfc" secondAttribute="bottom" constant="-7" id="GMu-d1-rFW"/>
+                                                <constraint firstItem="Hrs-6K-bfc" firstAttribute="top" secondItem="nEH-iT-cd2" secondAttribute="topMargin" constant="-8" id="OzB-IH-6dc"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Hrs-6K-bfc" secondAttribute="trailing" constant="-8" id="mSx-Bh-jn1"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>

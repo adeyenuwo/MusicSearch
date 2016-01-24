@@ -20,7 +20,7 @@
     
     // In order to be able to reach global audiences with the app, internalization is important. This is demonstrated in the next line, pulling the title from the Localizable strings file. In a full-fledged app, all string will be placed in this file and fetched when required. It also makes it easier to have all text in the same place, making it easier to apply copy-updates app-wide, by making changes in the localizable strings file
     self.navigationItem.title = NSLocalizedString(@"MUSIC_SCENE_TITLE", nil);
-    _musicEntity = [[NSMutableArray alloc] init];
+    _resultArray = [[NSMutableArray alloc] init];
     _tableView.delegate = self;
     
 }
@@ -36,30 +36,32 @@
     return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSInteger rows = [[self musicEntity] count];
-    return rows;
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {    
+    return [_resultArray count];
 }
 
 #pragma mark - UITableView Delegate Methods
 
-- (MusicTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellIdentifier = @"MusicCell";
-    MusicTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    MusicTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     if (cell == nil) {
         cell = [[MusicTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     // This method helps to separate the customization of the contents of the cell from the delegate method that dequeues a re-usable cell or creates a new one, if there is none to deque.
     [self configureCell:cell forTableView:tableView atIndexPath:indexPath];
+    
     return cell;
 }
 
 - (void)configureCell:(MusicTableViewCell *)cell forTableView:(UITableView *)tableView atIndexPath:(NSIndexPath *)indexPath {
-    Music *music = [_musicEntity objectAtIndex:indexPath.row];
-    cell.albumNameLabel.text = [music albumName];
-    cell.artistNameLabel.text = [music artistName];
-    cell.trackNameLabel.text = [music trackName];
-    NSString *urlString = [music albumImageUrl];
+    
+    Music *music = [_resultArray objectAtIndex:indexPath.row];
+    cell.albumNameLabel.text = [music valueForKey:@"collectionName"];
+    cell.artistNameLabel.text = [music valueForKey:@"artistName"];
+    cell.trackNameLabel.text = [music valueForKey:@"trackName"];
+    NSString *urlString = [music valueForKey:@"artworkUrl60"];
+    
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:urlString]];
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     [cell.albumImageView setImageWithURLRequest:request
@@ -70,19 +72,21 @@
                                             [cell.activityIndicator stopAnimating];
                                         } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
                                             NSLog(@"An error occured retrieving the image %@", [error description]);
+                                            [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
                                         }];
 }
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [_tableView deselectRowAtIndexPath:indexPath animated:YES];
     UIStoryboard *storyBoard = self.storyboard;
     LyricsViewController *lyricsViewController = [storyBoard instantiateViewControllerWithIdentifier:@"LyricsViewController"];
     Song *aSong = [[Song alloc] init];
-    Music *music = [_musicEntity objectAtIndex:indexPath.row];
+    Music *music = [_resultArray objectAtIndex:indexPath.row];
     aSong.artist = [music valueForKey:@"artistName"];
     aSong.song = [music valueForKey:@"trackName"];
-    aSong.lyrics = [music valueForKey:@"albumName"];
-    aSong.url = [music valueForKey:@"albumImageUrl"];
+    aSong.lyrics = [music valueForKey:@"collectionName"];
+    aSong.url = [music valueForKey:@"artworkUrl60"];
     lyricsViewController.song = aSong;
     [self.navigationController pushViewController:lyricsViewController animated:YES];
 }
@@ -96,15 +100,7 @@
     NSDictionary *params = [[NSDictionary alloc] initWithObjectsAndKeys:searchBar.text, @"searchterm", nil];
     [[APIClient sharedInstance] getMusicCommand:params onCompletion:^(NSDictionary *json) {
         if ([json objectForKey:@"results" ] != nil) {
-            _dictionary = [json objectForKey:@"results"];
-            Music *music = [[Music alloc] init];
-            for (id obj in _dictionary) {
-                music.albumName = [obj valueForKey:@"collectionName"];
-                music.artistName = [obj valueForKey:@"artistName"];
-                music.trackName = [obj valueForKey:@"trackName"];
-                music.albumImageUrl = [obj valueForKey:@"artworkUrl60"];
-                [_musicEntity addObject:music];
-            }
+            _resultArray = [json objectForKey:@"results"];
             
             // Update the UI after the model is changed by data fetched from the API
             dispatch_async(dispatch_get_main_queue(), ^{

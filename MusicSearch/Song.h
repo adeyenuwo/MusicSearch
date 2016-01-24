@@ -13,7 +13,7 @@
 @property (nonatomic, copy) NSString *artist;
 @property (nonatomic, copy) NSString *song;
 @property (nonatomic, copy) NSString *lyrics;
-@property (nonatomic, weak) NSString *url;
+@property (nonatomic, copy) NSString *url;
 
 /**
  *  This is the Song class

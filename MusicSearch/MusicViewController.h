@@ -14,8 +14,7 @@
 #import "LyricsViewController.h"
 
 @interface MusicViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
-@property (strong, nonatomic) NSMutableArray *musicEntity;
-@property (strong, nonatomic) NSDictionary *dictionary;
+@property (strong, nonatomic) NSMutableArray *resultArray;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
