@@ -22,42 +22,40 @@ typedef void (^DataResponseBlock)(NSData *data);
 }
 
 /**
- *  <#Description#>
+ *  Initialize the API Client
  *
- *  @param url <#url description#>
- *
- *  @return <#return value description#>
+ *  @return API Client Instance
  */
 - (instancetype) init;
 
 /**
- *  <#Description#>
+ *  Singleton class instance of API Client
  *
- *  @return <#return value description#>
+ *  @return sharedInstance
  */
 + (instancetype) sharedInstance;
 
 /**
- *  <#Description#>
+ *  Convenience wrapper method for POST operations
  *
- *  @param params          <#params description#>
- *  @param completionBlock <#completionBlock description#>
+ *  @param params           dictionary of parameters
+ *  @param completionBlock completionBlock
  */
 - (void)postCommand:(NSDictionary *)params onCompletion:(JSONResponseBlock)completionBlock;
 
 /**
- *  <#Description#>
+ *  Convenience wrapper method for GET operations
  *
- *  @param params          <#params description#>
- *  @param completionBlock <#completionBlock description#>
+ *  @param params           dictionary of parameters
+ *  @param completionBlock completionBlock
  */
 - (void)getMusicCommand:(NSDictionary *)params onCompletion:(JSONResponseBlock)completionBlock;
 
 /**
- *  <#Description#>
+ *  Convenience wrapper method for GET operations
  *
- *  @param params          <#params description#>
- *  @param completionBlock <#completionBlock description#>
+ *  @param params          dictionary of parameters
+ *  @param completionBlock completionBlock
  */
 - (void)getLyricsCommand:(NSDictionary *)params onCompletion:(DataResponseBlock)completionBlock;
 

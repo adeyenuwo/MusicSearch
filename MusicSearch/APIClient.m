@@ -57,21 +57,17 @@
         switch (status) {
             case AFNetworkReachabilityStatusNotReachable:
                 //NSLog(@"No internet connection");
-                
-                [UIAlertController alertControllerWithTitle:@"" message:nil preferredStyle:UIAlertControllerStyleAlert actions:[UIAlertAction actionWithTitle: @"Close" style: UIAlertActionStyleDefault handler: nil]];
-                
+                [UIAlertController alertControllerWithTitle:@"Error" message:@"No Connection." preferredStyle:UIAlertControllerStyleAlert actions:[UIAlertAction actionWithTitle: @"Close" style: UIAlertActionStyleDefault handler: nil]];
                 break;
             case AFNetworkReachabilityStatusReachableViaWiFi:
                 //NSLog(@"Reachable by WIFI");
-                //[UIAlertView showAlert:@"Success" message:@"Connected via Wi-Fi"];
                 break;
             case AFNetworkReachabilityStatusReachableViaWWAN:
                 //NSLog(@"Reachable by WAN");
-                //[UIAlertView showAlert:@"Success" message:@"Connected via 3G WAN"];
                 break;
             default:
                 //NSLog(@"Network status is unknown");
-                [UIAlertController alertControllerWithTitle:@"" message:nil preferredStyle:UIAlertControllerStyleAlert actions:[UIAlertAction actionWithTitle: @"Close" style: UIAlertActionStyleDefault handler: nil]];
+                [UIAlertController alertControllerWithTitle:@"Error" message:@"There is a connection problem." preferredStyle:UIAlertControllerStyleAlert actions:[UIAlertAction actionWithTitle: @"Close" style: UIAlertActionStyleDefault handler: nil]];
                 break;
         }
     }];

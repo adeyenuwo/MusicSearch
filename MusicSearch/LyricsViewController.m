@@ -29,6 +29,7 @@
 }
 
 - (NSURL *)parseResponseData:(NSData *)data {
+    NSLog(@"Data returned is %@", data);
     NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     NSArray *responseArray = [NSArray new];
     responseArray = [[[[string stringByReplacingOccurrencesOfString:@"{" withString:@""] stringByReplacingOccurrencesOfString:@"}" withString:@""] stringByReplacingOccurrencesOfString:@"\n" withString:@""] componentsSeparatedByString:@","];
